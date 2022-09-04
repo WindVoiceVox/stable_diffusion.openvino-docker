@@ -34,6 +34,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libgl1-mesa-dev \
         python3-pip \
         python3-venv \
+        vim \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -47,7 +48,10 @@ RUN python3 -m venv openvino_env &&\
     pip install openvino==2022.1.0 && \
     git clone https://github.com/bes-dev/stable_diffusion.openvino.git && \
     cd stable_diffusion.openvino && \
-    pip install -r requirements.txt
+    pip install -r requirements.txt && \
+    pip install streamlit && \
+    pip install streamlit-drawable-canvas
+EXPOSE 8501
 RUN echo "source ~/openvino_env/bin/activate" >> ~/.bashrc
 WORKDIR /home/$USERNAME/stable_diffusion.openvino
 
