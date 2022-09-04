@@ -27,5 +27,14 @@ docker run -it --rm --device /dev/dri:/dev/dri -v $HOME:$HOME stable_diffusion:o
 python stable_diffusion.py --prompt "Street-art painting of Emilia Clarke in style of Banksy, photorealism"
 ```
 
+## Example via streamlit
+```shell
+streamlit run demo_web.py 
+```
+
+and access http://(Your IP Address):8501
+
+
+
 [^1]: stable_diffusion.openvino <https://github.com/bes-dev/stable_diffusion.openvino>  
 
