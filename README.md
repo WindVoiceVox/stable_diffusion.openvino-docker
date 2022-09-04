@@ -28,13 +28,18 @@ python stable_diffusion.py --prompt "Street-art painting of Emilia Clarke in sty
 ```
 
 ## Example via streamlit
+
+When docker run, map port 8501 for streamlit.
+
+```shell
+docker run -it --rm -p 8501:8501 stable_diffusion:openvino bash
+```
+
 ```shell
 streamlit run demo_web.py 
 ```
 
-and access http://(Your IP Address):8501
-
-
+access http://(Your IP Address):8501
 
 [^1]: stable_diffusion.openvino <https://github.com/bes-dev/stable_diffusion.openvino>  
 
