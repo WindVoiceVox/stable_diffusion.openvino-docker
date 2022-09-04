@@ -39,7 +39,7 @@ docker run -it --rm -p 8501:8501 stable_diffusion:openvino bash
 streamlit run demo_web.py 
 ```
 
-access http://(Your IP Address):8501
+access http://(Your PC (not docker container) IP Address):8501
 
 [^1]: stable_diffusion.openvino <https://github.com/bes-dev/stable_diffusion.openvino>  
 
